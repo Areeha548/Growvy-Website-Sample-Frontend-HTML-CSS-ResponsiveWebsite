@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>My Responsive Website</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <div class="header-container">
+      <div class="header-wrapper">
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="index.html">Home</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="success.html">Success</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+    <div class="main-content">
+      <section class="services-section">
+        <div class="services-header">
+          <h2>Success</h2>
+          <p>
+            "Discover inspiring Success Stories—see how our solutions empower
+            businesses to thrive!
+          </p>
+        </div>
+      </section>
+    </div>
+    <!--  Join over 10k users worldwide (Pricing) -->
+    <section class="join-users-pricing-section">
+      <h2>Join over 10k users worldwide</h2>
+      <button class="view-pricing-button">View Pricing</button>
+
+      <!-- NEW IMAGE ROW SECTION -->
+      <div class="user-logos-row">
+        <img
+          src="images/03.07.2025_15.13.44_REC.png"
+          alt="Logo 1"
+          class="user-logo"
+        />
+        <img src="images/ep.png" alt="Logo 2" class="user-logo" />
+        <img src="images/bird.png" alt="Logo 3" class="user-logo" />
+        <img src="images/motive.png" alt="Logo 4" class="user-logo" />
+      </div>
+    </section>
+    <section class="jobconnect-section">
+      <div class="jobconnect-container">
+        <!-- Top: Logo + Text -->
+        <div class="jobconnect-hero">
+          <img
+            src="images/join.png"
+            alt="Growvy Logo"
+            class="jobconnect-logo"
+          />
+          <div class="jobconnect-content">
+            <h2 class="jobconnect-title">
+              Join Growvy's 50M+ Job Seeker<br />
+              Community & Get Hired Faster!
+            </h2>
+            <p class="jobconnect-description">
+              "Build your profile, get noticed by top employers, and access
+              exclusive job opportunities tailored to your skills. Your next
+              career move starts here!"
+            </p>
+            <button class="jobconnect-button">Sign In</button>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="jobconnect-testimonials">
+          <div class="jobconnect-card">
+            <img src="images/user.png" alt="User" class="jobconnect-avatar" />
+            <div class="jobconnect-card-body">
+              <p>Excellent Experience with growvy.</p>
+              <div class="jobconnect-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+
+          <div class="jobconnect-card">
+            <img src="images/user.png" alt="User" class="jobconnect-avatar" />
+            <div class="jobconnect-card-body">
+              <p>Excellent Experience with growvy.</p>
+              <div class="jobconnect-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="jobconnect-dots">
+          <span class="jobconnect-dot active"></span>
+          <span class="jobconnect-dot active"></span>
+          <span class="jobconnect-dot active"></span>
+          <span class="jobconnect-dot active"></span>
+          <span class="jobconnect-dot active"></span>
+          <span class="jobconnect-dot active"></span>
+          <span class="jobconnect-dot active"></span>
+          <span class="jobconnect-dot active"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Start -->
+    <div class="footer-container">
+      <!-- Left Column -->
+      <div class="footer-section growvy-section">
+        <h2>Growvy</h2>
+        <p>
+          Optimize your business with smart asset management, growth strategies,
+          and cutting-edge solutions to boost sales and efficiency with Growvy!
+        </p>
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook.jpeg" alt="Facebook" /></a>
+          <a href="#"><img src="images/insta.jpeg" alt="Instagram" /></a>
+          <a href="#"><img src="images/linkedin.jpeg" alt="LinkedIn" /></a>
+        </div>
+      </div>
+
+      <!-- Middle Column -->
+      <div class="footer-section nav-links-section">
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Plans & Pricing</a></li>
+          <li><a href="#">Business Solutions</a></li>
+          <li><a href="#">Success Stories</a></li>
+          <li><a href="#">Jobs</a></li>
+        </ul>
+
+        <!--Star Rating under Jobs link -->
+        <div class="star-rating">
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="footer-section rating-image-section">
+        <div class="growth-image">
+          <img src="images/green-arrow.png" alt="Growth Arrow" />
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <script>
+      // Mobile Navigation Toggle
+      const hamburgerMenu = document.getElementById("hamburger-menu");
+      const navMenu = document.getElementById("nav-menu");
+
+      hamburgerMenu.addEventListener("click", function () {
+        hamburgerMenu.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      // Close menu when clicking on a link
+      const navLinks = document.querySelectorAll(".nav-menu a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburgerMenu.classList.remove("active");
+          navMenu.classList.remove("active");
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (event) {
+        if (
+          !hamburgerMenu.contains(event.target) &&
+          !navMenu.contains(event.target)
+        ) {
+          hamburgerMenu.classList.remove("active");
+          navMenu.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
