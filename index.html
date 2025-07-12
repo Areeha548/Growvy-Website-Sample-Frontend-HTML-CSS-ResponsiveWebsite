@@ -14,6 +14,9 @@
     <!-- Header Start -->
     <div class="header-container">
       <div class="header-wrapper">
+        <a href="index.html" class="navbar-logo">
+          <img src="images/growvy-arrow.png" alt="Growvy Logo" />
+        </a>
         <div class="hamburger-menu" id="hamburger-menu">
           <span></span>
           <span></span>
@@ -227,16 +230,14 @@
         });
       });
 
-      // Close menu when clicking outside
-      document.addEventListener("click", function (event) {
-        if (
-          !hamburgerMenu.contains(event.target) &&
-          !navMenu.contains(event.target)
-        ) {
-          hamburgerMenu.classList.remove("active");
-          navMenu.classList.remove("active");
-        }
-      });
+
+// Close menu when clicking outside
+document.addEventListener("click", function(event) {
+    if (hamburgerMenu.contains(event.target) && navMenu.contains(event.target)) {
+        hamburgerMenu.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
+});
     </script>
   </body>
 </html>
