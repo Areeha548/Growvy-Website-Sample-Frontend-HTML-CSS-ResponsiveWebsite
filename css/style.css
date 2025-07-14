@@ -55,11 +55,11 @@ body {
   display: flex; /* Use flex to center the image if needed */
   align-items: center;
   margin-right: auto; /* Pushes the logo to the left, and nav-menu to the right */
-  padding-left: 10px; /* Add some padding to the left of the logo */
+  padding-left: 0px; /* less padding to the left of the logo */
 }
 
 .navbar-logo img {
-  height: 40px; /* Adjust logo height as needed */
+  height: 50px; /* Adjust logo height as needed */
   width: auto; /* Maintain aspect ratio */
   transition: transform 0.3s ease;
 }
